@@ -32,6 +32,19 @@ describe('Amazon automation', () => {
 
     cy.get('#add-to-cart-button').click();// adding to Cart
 
+    cy.get("#attach-popover-lgtbox").click({force:true})
+
+  //  // cy.get('#attachSiNoCoverage > span > input').click();
+  //   cy.get('#attachSiNoCoverage > span > input').then(($el) => {
+  //     if ($el.length) {
+  //       cy.wrap($el).click();
+  //     } else {
+  //       // Do nothing if the element is not visible
+  //       cy.log('Element not visible, continuing with the test');
+  //     }
+  //   });
+
     cy.get('#sc-buy-box-ptc-button > span > input').click();//Moving to buy now screen
+
   });
 });
