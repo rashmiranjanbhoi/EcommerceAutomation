@@ -32,7 +32,7 @@ describe('Amazon automation', () => {
 
     cy.get('#add-to-cart-button').click(); // adding to Cart
 
-    cy.get("#attach-popover-lgtbox").click({
+    cy.get("#attach-popover-lgtbox").click({ //removing a skip popup
       force: true
     })
 

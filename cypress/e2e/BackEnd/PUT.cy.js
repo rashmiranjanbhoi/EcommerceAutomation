@@ -5,14 +5,14 @@ describe('PUT Request', () => {
       url: 'https://jsonplaceholder.typicode.com/posts/1',
       body: {
         id: 1,
-        title: 'Updated Title',
+        title: 'One piece',
         body: 'Updated body content',
         userId: 1
       },
       failOnStatusCode: false
     }).then((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body).to.have.property('title', 'Updated Title');
+      expect(response.body).to.have.property('title', 'One piece');
     });
   });
 });
