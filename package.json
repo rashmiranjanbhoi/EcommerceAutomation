@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress-audit/lighthouse": "^1.4.2",
+    "cypress": "^13.14.2",
+    "cypress-audit": "^1.1.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "lighthouse": "^12.2.1"
+  },
+  "dependencies": {
+    "zap": "^2.1.1"
+  }
+}
