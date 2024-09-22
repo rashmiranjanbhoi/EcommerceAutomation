@@ -30,21 +30,23 @@ describe('Amazon automation', () => {
     });
 
 
-    cy.get('#add-to-cart-button').click();// adding to Cart
+    cy.get('#add-to-cart-button').click(); // adding to Cart
 
-    cy.get("#attach-popover-lgtbox").click({force:true})
+    cy.get("#attach-popover-lgtbox").click({
+      force: true
+    })
 
-  //  // cy.get('#attachSiNoCoverage > span > input').click();
-  //   cy.get('#attachSiNoCoverage > span > input').then(($el) => {
-  //     if ($el.length) {
-  //       cy.wrap($el).click();
-  //     } else {
-  //       // Do nothing if the element is not visible
-  //       cy.log('Element not visible, continuing with the test');
-  //     }
-  //   });
+    cy.get('#sc-buy-box-ptc-button > span > input').click(); //Moving to buy now screen
 
-    cy.get('#sc-buy-box-ptc-button > span > input').click();//Moving to buy now screen
+    //Performance Testing
+
+    cy.lighthouse({
+      performance: 85,
+      accessibility: 90,
+      'best-practices': 85,
+      seo: 80,
+      pwa: 70,
+    });
 
   });
 });

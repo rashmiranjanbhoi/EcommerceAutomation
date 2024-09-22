@@ -17,6 +17,12 @@
   npm i --force  (if npm install not works)
   ```
 
+   ### Use below command to run all test files:
+
+  ```sh
+    npx cypress run
+  ```
+
  ### Use below command to run test files in web browser: For example:
 
   ```sh
