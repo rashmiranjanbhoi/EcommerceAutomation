@@ -3,7 +3,7 @@ describe('DELETE Request', () => {
 
     cy.request({
       method: 'POST',
-      url: '/posts',
+      url: 'https://jsonplaceholder.typicode.com/posts',
       body: {
         title: 'Post will be deleted',
         body: 'I will delete this POST',
@@ -16,14 +16,14 @@ describe('DELETE Request', () => {
       // delete the post
       cy.request({
         method: 'DELETE',
-        url: `/posts/${postId}`
+        url: `https://jsonplaceholder.typicode.com/posts/${postId}`
       }).then((deleteResponse) => {
         expect(deleteResponse.status).to.eq(200);
 
         // Verifing
         cy.request({
           method: 'GET',
-          url: `/posts/${postId}`,
+          url: `https://jsonplaceholder.typicode.com/posts/${postId}`,
           failOnStatusCode: false // Prevent Cypress from failing the test on 404
         }).then((getResponse) => {
           expect(getResponse.status).to.eq(404);

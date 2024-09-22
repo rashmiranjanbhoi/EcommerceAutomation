@@ -10,7 +10,12 @@ module.exports = defineConfig({
     json: true,
   },
   e2e: {
-     "baseUrl": "https://jsonplaceholder.typicode.com",
+     "baseUrl": "http://localhost:8080",
+     "chromeWebSecurity": false,
+     "env": {
+      "HTTP_PROXY": "http://localhost:8080",
+      "HTTPS_PROXY": "http://localhost:8080"
+    },
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
       on('before:browser:launch', (browser = {}, launchOptions) => {

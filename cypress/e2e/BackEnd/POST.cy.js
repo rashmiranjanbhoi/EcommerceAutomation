@@ -1,6 +1,6 @@
 describe('POST /posts', () => {
   it('It will create a new post', () => {
-    cy.request('POST', '/posts', {
+    cy.request('POST', 'https://jsonplaceholder.typicode.com/posts', {
       title: 'foo',
       body: 'bar',
       userId: 1

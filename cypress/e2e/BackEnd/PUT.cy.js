@@ -2,7 +2,7 @@ describe('PUT Request', () => {
   it("Let's update a POST", () => {
     cy.request({
       method: 'PUT',
-      url: '/posts/1',
+      url: 'https://jsonplaceholder.typicode.com/posts/1',
       body: {
         id: 1,
         title: 'Updated Title',

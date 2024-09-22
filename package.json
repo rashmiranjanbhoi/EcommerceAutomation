@@ -15,5 +15,8 @@
     "cypress-audit": "^1.1.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "lighthouse": "^12.2.1"
+  },
+  "dependencies": {
+    "zap": "^2.1.1"
   }
 }
